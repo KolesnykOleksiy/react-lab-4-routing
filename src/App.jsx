@@ -6,18 +6,21 @@ import ConcreteCardPage from "./pages/ConcreteCardPage.jsx";
 
 function App() {
 
-  return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<div>Home element</div>} />
-          <Route path="shop" element={<CardsPage/>}/>
-          <Route path="shop/:id" element={<ConcreteCardPage/>} />
-
-          <Route path="news" element={<NewsPage/>}/>
-          <Route path="shop/:id" element={<ConcreteCardPage/>} />
-        </Routes>
-      </Router>
-  )
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<div>Home element</div>}>
+                    <Route index element={<div>Home element</div>} />
+                </Route>
+                <Route path="shop" element={<CardsPage />}>
+                    <Route path=":id" element={<ConcreteCardPage/>} />
+                </Route>
+                <Route path="news" element={<NewsPage/>}>
+                    <Route path=":id" element={<ConcreteCardPage/>} />
+                </Route>
+            </Routes>
+        </Router>
+    )
 }
 
 export default App
