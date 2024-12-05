@@ -1,7 +1,7 @@
 import React from 'react';
 import {useLocation} from "react-router-dom";
 import CardItem from "./cardspage-components/CardItem/CardItem.jsx";
-
+import './CardsPage.css'
 const CardsPage = () => {
 
     const cardList = [
@@ -31,7 +31,7 @@ const CardsPage = () => {
     return (
         <div>
             <div>Cards list :</div>
-            <div style={{display: "flex", gap: 15, flexDirection: "column"}}>
+            <div className={"cardsList"} >
                 {cardList.map((card, index) => (
                     <CardItem card={card} key={index} />
                 ))}

@@ -1,0 +1,12 @@
+.cardsList{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin: 10px;
+}
+@media (min-width: 800px) {
+    .cardsList{
+        flex-direction: row;
+
+    }
+}

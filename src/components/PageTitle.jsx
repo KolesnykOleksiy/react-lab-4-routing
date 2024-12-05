@@ -4,7 +4,8 @@ import {Outlet} from "react-router-dom";
 const PageTitle = ({ title, children }) => {
     return (
         <div>
-            <h1>{title} (Current path: {location.pathname})</h1>
+            <h1>{title}</h1>
+            <h2>(Current path: {location.pathname})</h2>
             {children || <Outlet/>}
         </div>
     );
