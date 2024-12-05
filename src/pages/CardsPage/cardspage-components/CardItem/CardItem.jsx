@@ -1,12 +1,21 @@
 import React from 'react';
-import {useParams} from "react-router-dom";
+import './CardItem.css'
+import {Link} from "react-router-dom";
+const CardItem = ({card}) => {
 
-const CardItem = ({id, title, description}) => {
-
+    const {id, title, description} = card;
+    console.log(card);
     return (
-        <div>
-
-        </div>
+        <Link to={`${id}`}>
+            <div className={"card-block"}>
+                <div>
+                    {id} . {title}
+                </div>
+                <div>
+                    {description}
+                </div>
+            </div>
+        </Link>
     );
 };
 
